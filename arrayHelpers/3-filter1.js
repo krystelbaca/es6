@@ -20,4 +20,13 @@ for (var i = 0; i < products.length; i++) {
   }
 }
 
-console.log(filterProducts)
+isFruit =  (products) => 
+  products.type === 'lact' && 
+  products.quantity > 0 && 
+  products.price <= budget
+
+var filterProductsFilter = products.filter( isFruit)
+
+console.log('for', filterProducts)
+
+console.log ('filter', filterProductsFilter)

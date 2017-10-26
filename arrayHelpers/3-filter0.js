@@ -14,4 +14,10 @@ for (var i = 0; i < products.length; i++) {
   }
 }
 
-console.log(filterProducts)
+var filterProductsFilter = products.filter(
+  (products) => products.type === 'fruit'
+)
+
+console.log('for', filterProducts)
+
+console.log ('filter', filterProductsFilter)

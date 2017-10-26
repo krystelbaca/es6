@@ -10,4 +10,6 @@ var users = [
  { id: 5, admin: true },
 ];
 
-var filteredUsers;
+var filteredUsers = users.filter(arg => arg.admin)
+
+console.log (filteredUsers)

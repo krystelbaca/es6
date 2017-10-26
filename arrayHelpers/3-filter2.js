@@ -8,7 +8,7 @@ var comments = [
 ]
 
 function commentsForPost (post, comments) {
-  
+  return comments.filter(arg => arg.postId === post.id)
 }
 
 var postComments = commentsForPost(post, comments)
