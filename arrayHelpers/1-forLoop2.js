@@ -8,15 +8,17 @@ function checkReminders() {
       { id: 3, title: 'Halloween', publishDate: '2017-10-30'  }
     ];
 
-    for (var i = 0; i < reminder.length; i++) {
-      notifyReminder(reminder[i]);
+    for (var i = 0; i < reminders.length; i++) {
+      notify(reminders[i]);
     }
+
+    reminders.forEach( notify )
 }
 
-function notifyReminder (reminder) {
+var notify = function notifyReminder (reminder) {
   if (new Date(reminder.publishDate) <= new Date()) {
     console.log(reminder)
   }
 }
 
-checkReminders()
+checkReminders(notify)

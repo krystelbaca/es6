@@ -11,4 +11,8 @@ var images = [
 ];
 var areas = [];
 
+images.forEach((arg,index) =>{
+  areas[index] = arg.height * arg.width
+})
+
 console.log(areas)
