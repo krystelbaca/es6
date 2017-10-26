@@ -8,3 +8,7 @@ var images = [
 ];
 
 var heights
+
+heights = images.map(image => image.height)
+
+console.log(heights)

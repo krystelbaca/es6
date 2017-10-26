@@ -9,4 +9,6 @@ var trips = [
 
 var speeds;
 
+speeds = trips.map(trip => trip.distance/trip.time)
+
 console.log(speeds)
