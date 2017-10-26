@@ -9,11 +9,13 @@
 // lessThanFifteen // [ 10 ];
 
 function reject(array, iteratorFunction) {
-
+ return array.filter(arg => /*!(arg > 15)*/ !iteratorFunction(arg))
 }
 
 var numbers = [10, 20, 30];
-var lessThanFifteen = reject(numbers, function(number){
+var lessThanFifteen =  reject(numbers, function(number){
   return number > 15
 });
 console.log(lessThanFifteen)
+
+
