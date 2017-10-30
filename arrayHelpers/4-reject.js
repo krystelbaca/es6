@@ -19,3 +19,14 @@ var lessThanFifteen =  reject(numbers, function(number){
 console.log(lessThanFifteen)
 
 
+var filterProducts = []
+function myFilter(numbers, iteratorFunction) {
+  for (var i = 0; i < numbers.length; i++) {
+    if (iteratorFunction) {
+      filterProducts.push(numbers[i])
+    }
+  }
+  return filterProducts
+}
+
+console.log(myFilter(numbers, (numbers > 15)))
